@@ -1,6 +1,6 @@
 import PageTitle from "./PageTitle";
 
-export default function({title,children}){
+export default function PageHeading({title,children}){
     return(
         <div className="page-heading-container">
             <PageTitle title={title}/>

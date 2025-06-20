@@ -1,7 +1,13 @@
 import ProductCard from "./ProductCard";
 
-export default function(){
+export default function ProductListing({ products }){
     return(
-        <ProductCard/>
+        <div className="product-listings-container">
+            <div className="product-listings-grid">
+                {products.length>0 ?
+                products.map(product=><ProductCard key={product.productId} product={product}/>):
+                <p>No Products to show</p>}
+            </div>
+        </div>
     )
 }
